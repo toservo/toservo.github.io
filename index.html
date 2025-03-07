@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="ShLfmns12NQmLQc9yBLn18cMcffHRGi5-WHVm6YjHhY">
+
+        <title>toSERVO</title>
+
+        <!-- toSERVO Version: 6.3.2-beta -->
+
+        <!-- Fonts -->
+        <link href="/css/guest-app.css?id=70d4548099745e359c7d" rel="stylesheet">
+        
+
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117493343-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-117493343-1');
+            </script>
+
+        
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #858d8f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 600;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: left;
+                margin: 0 1em;
+            }
+
+            .centered {
+                text-align: center;
+            }
+
+            .feature-bordered {
+                color: black;
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray;
+            }
+
+            .title {
+                font-size: 40px;
+            }
+
+            .small-title {
+                font-size: 24px;
+            }
+
+            .nav-link {
+                color: #969d9d;
+                /* color: #858d8f; */
+                /*color: #636b6f;*/
+                padding: 0 25px;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .nav-link:hover {
+                color: #555;
+            }
+
+            .links-block > a {
+                display: block;
+                margin-top: 1em;
+                font-size: 18px;
+            }
+
+            .m-b-md {
+                margin-bottom: 75px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /******* Desktop ***********/
+
+            @media  only screen and (min-width: 800px) {
+
+                html, body {
+                    font-weight: 300;
+                }
+
+                .content {
+                    text-align: center;
+                }
+
+                .title {
+                    font-size: 84px;
+                }
+
+                .links-block > a {
+                    display: inline;
+                    margin-top: 0;
+                }
+
+                .m-b-d {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+            }
+
+            .navbar-toggler {
+                position: absolute;
+                right: 1rem;
+		display: none;
+            }
+
+            /* @media (min-width: 768px) { */
+                .form-group.nav-item {
+                    float: right;
+                    clear: right;
+                }
+            /* } */
+
+            /** Adjust navbar to collapse at a different break point than the
+                 default for Bootstrap 3 */
+            /* @media (max-width: 22991px) {
+                .navbar {
+                    background: rgb(243,243,243);
+                }
+                .navbar-header {
+                    float: none;
+                }
+                .navbar-toggle {
+                    display: block;
+                }
+                .navbar-collapse {
+                    border-top: 1px solid transparent;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+                }
+                .navbar-collapse.collapse {
+                    display: none!important;
+                }
+                .navbar-nav {
+                    float: none!important;
+                    margin: 7.5px -15px;
+                }
+                .navbar-nav>li {
+                    float: none;
+                }
+                .navbar-nav>li>a {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                .navbar-text {
+                    float: none;
+                    margin: 15px 0;
+                }
+                .navbar-collapse.collapse.in {
+                    display: block!important;
+                }
+                .collapsing {
+                    overflow: hidden!important;
+                }
+            }
+            .navbar .navbar-toggle .icon-bar {
+                background-color: rgb(39,45, 124) !important;
+                height: 4px;
+                border-radius: 5px;
+            } */
+
+            .logo-text-color {
+                color: #113983 !important;
+                font-weight: bold;
+            }
+        </style>
+
+            </head>
+    <body>
+
+
+        
+        
+        <nav class="navbar navbar-light bg-light fixed-top" role="navigation">
+            
+                <div class="navbar-header">
+                    <button class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbar"
+                        aria-controls="navbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    
+                    
+
+                    <a class="navbar-brand logo-text-color" href="/">
+                        <img src="/img/toservo-logo-no-text-32x40.png"
+                            alt="toSERVO"
+                            class="img img-fluid"
+                            style="display: inline; margin-top: -4px;">
+                        &nbsp;
+                        toSERVO
+                    </a>
+
+                        
+    <style type="text/css" lang="css">
+
+    .btn-sign-up-header, .btn-sign-up-header:hover {
+        background: rgb(72, 166, 226);
+        color: white;
+        border-radius: 15px;
+        border: 3px solid white;
+        box-shadow: 1px 1px 5px #999;
+    }
+
+    .btn-sign-up-header:hover {
+        background: rgb(82, 176, 236);
+    }
+
+    .sign-up-align-center {
+        position: absolute;
+        top: 0;
+        /* left: 44% // Note that this gets defined in each breakpoint below */
+    }
+
+    @media  only screen and (min-width: 150px) {
+        .sign-up-align-center { left: 38% }
+    }
+
+    @media  only screen and (min-width: 436px) {
+        .sign-up-align-center { left: 41% }
+    }
+
+    @media  only screen and (min-width: 768px) {
+        .sign-up-align-center { left: 44% }
+    }
+
+    @media  only screen and (min-width: 992px) {
+        .sign-up-align-center { left: 41% }
+    }
+
+    @media  only screen and (min-width: 1200px) {
+        .sign-up-align-center { left: 44% }
+    }
+
+</style>
+
+<div class="sign-up-align-center">
+    
+    <!-- <a href="/customer/app#/quotes/whats-your-name" class="btn btn-sign-up-header mt-2 mb-1">
+        <strong>Check Our Prices</strong>
+        
+    </a>-->
+</div>
+
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <form class="navbar-form navbar-right" style="margin-top: 8px">
+                        <!--
+				<div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/register">
+                                Customer Sign Up
+                            </a>
+                            
+                        </div>
+                        <div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/customer/app">
+                                Customer Log In
+                            </a>
+                        </div>
+
+                        <div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/servicer/welcome">
+                                Provider Sign Up
+                            </a>
+                            
+                        </div>
+                        <div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/servicer/app">
+                                Provider Log In
+                            </a>
+                            
+                        </div>
+
+                        
+                        <div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/about">
+                                About
+                            </a>
+                        </div>
+                        <div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/customer/faq">
+                                FAQ
+                            </a>
+			</div> -->
+                        <div class="form-group nav-item">
+                            <a class="nav-link" href="https://toservo.com/contact.html">
+                                Contact
+                            </a>
+                        </div>
+
+                    </form>
+                </div><!--/.navbar-collapse -->
+            
+        </nav>
+
+        
+<style type="text/css" lang="css">
+    .sign-up-to-demo {
+        /* margin-left: auto;
+        margin-right: auto; */
+        font-size: .8rem;
+        padding: 3.5rem;
+    }
+
+    .jumbotron {
+        background: inherit;
+    }
+
+    .btn-primary {
+        background-color: #113983;
+    }
+
+    @media  only screen and (max-width: 436px) {
+        .hidden-sm {
+            display: none !important;
+        }
+    }
+
+    ul.price-list {
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    blockquote {
+        font-family: Georgia, serif;
+        /* See @media  sections for font-size */
+        /* font-size: 28px; */
+        font-style: italic;
+        /* width: 500px; */
+        margin: 0.25em 0;
+        padding: 0.35em 40px;
+        line-height: 1.45;
+        position: relative;
+        color: #383838;
+        border: none;
+    }
+
+    blockquote:before {
+        display: block;
+        padding-left: 10px;
+        content: "\201C";
+        font-size: 80px;
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        color: #7a7a7a;
+    }
+
+    blockquote cite {
+        color: #999999;
+        display: block;
+        margin-top: 5px;
+    }
+
+    blockquote cite:before {
+        content: "\2014 \2009";
+    }
+
+    .carousel-3d-slide {
+        border: none;
+        background: none;
+    }
+
+    .flex-layout, .main-slogan-outer, .on-our-way-section {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .pricing-section {
+        flex-wrap: wrap;
+    }
+
+    @media  only screen and (min-width: 150px) {
+        .sign-up-to-demo {
+            /* max-width: 66%; */
+            font-size: 1rem;
+        }
+        .container { font-size: 1rem; }
+        section { font-weight: normal }
+        section h2, section h3 { font-weight: bold }
+        blockquote { font-size: 22px; }
+        blockquote cite { font-size: 15px; }
+        .main-slogan-outer {
+            margin: 8rem 0 0;
+            flex-direction: column-reverse;
+        }
+        .main-slogan h2 { font-size: 1.8rem; }
+        .img-logo { min-width: 80%; }
+    }
+
+    @media  only screen and (min-width: 768px) {
+        .container { font-size: 1.1rem; }
+        .main-slogan-outer {
+            margin: 5rem 0 0;
+            flex-direction: row;
+        }
+        .main-slogan h2 { font-size: 2.2rem; }
+        .img-logo { margin-top: 2.5rem; }
+        blockquote { font-size: 24px; }
+        blockquote cite { font-size: 16px; }
+    }
+
+    @media  only screen and (min-width: 992px) {
+        .sign-up-to-demo {
+            /* max-width: 50%; */
+            font-size: 1.3rem;
+            padding: 0;
+        }
+        .container { font-size: 19px; }
+        .main-slogan-outer { margin: 4rem 0 0; }
+        .main-slogan h2 { font-size: 2.9rem; }
+        blockquote { font-size: 26px; }
+        blockquote cite { font-size: 17px; }
+    }
+
+    @media  only screen and (min-width: 1200px) {
+        .sign-up-to-demo {
+            /* max-width: 33%; */
+            font-size: 1.4rem;
+        }
+        .main-slogan-outer { margin: 6rem 0 0; }
+        .main-slogan h2 { font-size: 3.2rem; }
+        blockquote { font-size: 28px; }
+        blockquote cite { font-size: 18px; }
+    }
+</style>
+
+<div id="welcome-page">
+    
+    <section class="mb-4 main-slogan-section flex-layout">
+        <div class="container">
+            <div class="main-slogan-outer row justify-content-center">
+                
+                <div class="col-md-6 main-slogan mr-sm-5 mt-5">
+                    <h2>Private Security<h2>
+                    <h2><em>Where</em> you need it</h2>
+                    <h2 class="mb-4"><em>When</em> you need it</h2>
+                    <button class="btn btn-lg mt-3 mb-2"
+                        style="min-width: 50%; background-color: rgb(72, 166, 226); color: white"
+                        type="button"
+                        @click="show_video_modal = true">
+                        <b-icon icon="play-fill"></b-icon>
+                        &nbsp;
+                        Watch Video
+                    </button>
+                    <br>
+                    <span>
+                        Plans starting at
+                        $19.99/mo
+                    </span>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <a href="/">
+                        <img src="/img/logo/02_PNG/toservo-logo-day-400x518.png"
+                            alt="toSERVO"
+                            class="img img-fluid img-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mb-4">
+        &nbsp;
+    </div>
+
+    <section class="mb-4 flex-layout">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                
+                <div class="col-sm-4 mb-4">
+                    <img class="img img-fluid img-radial-gradient img-help-button d-block mx-auto mb-5"
+                        src="/img/welcome/help-button-blue-radial.png"
+                        alt="Help Button">
+                    <div>
+                        <h3>We're On Our Way</h3>
+                        <p>Threatening customer?<br>
+                            Late night alarm or camera activity?</p>
+                        <p>Don’t wait hours for the police.</p>
+                        <p>Send an armed, uniformed guard to your home or business with
+                            just a few taps on your phone.</p>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-sm-4 mb-4">
+                    <img class="img img-fluid img-radial-gradient img-vehicle d-block mx-auto mb-5"
+                        src="/img/welcome/security-vehicle-blue-radial.png" alt="Security Vehicle">
+                    <div>
+                        <h3>Trusted &amp; Insured</h3>
+                        <p>All toSERVO security providers are vetted
+                          insured professionals from local private security firms.
+                          All providers hold active state issued security guard
+                          licenses requiring fingerprint background checks, and
+                          extensive non-lethal and lethal weapons training.</p>
+                    </div>
+                </div>
+
+                
+                <div class="col-sm-4 mb-4">
+                    <img class="img img-fluid img-gps-phone img-radial-gradient d-block mx-auto mb-5"
+                        src="/img/welcome/gps-phone-blue-radial.png" alt="GPS Navigation via Phone">
+                    <div>
+                        <h3>GPS Based</h3>
+                        <p>We send the closest guard in our network.</p>
+                        <p>Receive notifications when a guard is en route,
+                            has arrived.</p>
+                        <p>Be connected directly with the guard upon arrival.</p>
+                        <p>Upon completion of response, you’ll receive an emailed report
+                            with photos.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="jumbotron jumbotron-fluid mb-4">
+        <div class="row justify-content-md-center py-lg-4" style="background: rgb(205, 226, 244); width: 100.5%">
+            <div class="sign-up-to-demo col-md-8 pr-3">
+                <p>
+                    Fully customizable plans, from a single family home to
+                    franchises or rental properties, all over town.
+                </p>
+                <p>
+                    <strong>
+                        Coverage starts at
+                        $19.99
+                        a month.
+                    </strong>
+                    <!-- <a href="/customer/app#/quotes/whats-your-name">Check our prices</a>
+			    to find the right plan for you. -->
+                </p>
+                <p>
+                    Questions? <a href="mailto:contact@toservo.com">Contact Us</a>.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    
+    <section class="mb-4">
+        <div id="carousel-section" class="container">
+            <carousel-3d :controls-visible="true" :disable3d="false" :width="carouselWidth" :height="carouselHeight" :space="500"
+                :autoplay="true" :autoplay-timeout="4500" :autoplayHoverPause="true">
+                <slide :index="0">
+                  <img src="/img/welcome/iphone-carousel-1.png" alt="Confirm location" class="mb-1 img img-fluid">
+                  <div class="text-center">
+                      <strong>1. Confirm location</strong>
+                  </div>
+                </slide>
+                <slide :index="1">
+                  <img src="/img/welcome/iphone-carousel-2.png" alt="Guards notified and responsd" class="mb-1 img img-fluid">
+                  <div class="text-center">
+                      <strong>2. Guards notified and respond</strong>
+                  </div>
+                </slide>
+                <slide :index="2">
+                  <img src="/img/welcome/iphone-carousel-3.png" alt="Receive report" class="mb-1 img img-fluid">
+                  <div class="text-center">
+                      <strong>3. Receive report</strong>
+                  </div>
+                </slide>
+            </carousel-3d>
+
+        </div>
+    </section>
+
+    
+
+    
+    <section class="mb-4 jumbotron jumbotron-fluid">
+        <div class="justify-content-md-center text-center" style="background: #eee; padding: 2rem 0">
+            <div class="py-2">
+                <button class="btn btn-lg"
+                    style="background-color: rgb(72, 166, 226); color: white"
+                    type="button"
+                    @click="show_2nd_video_modal = true">
+                    <b-icon icon="play-fill"></b-icon>
+                    &nbsp;
+                    Watch a Detailed Walkthrough
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="mb-4">
+        <div class="container">
+            <div class="row">
+                <blockquote class="col-sm-10" style="margin: 3rem; padding-left: 5rem">
+                    The service toSERVO provided was exactly what we needed, when we needed it."
+                    <cite>
+                        Matt Gabel, Owner of Serafian's Oriental Rugs
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    
+    <section class="mb-4">
+        <div class="container">
+            <div class="row">
+                <blockquote class="col-sm-10" style="margin: 3rem; padding-left: 5rem">
+                    Our office alarm was going off over the weekend. I had to drop
+                    everything and go check it out. That won't happen again; I
+                    signed up for toSERVO.
+                    <cite>
+                        Eric T., General Contractor
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    
+    <video-modal v-if="show_video_modal"
+        @close="show_video_modal = false">
+        <iframe width="90%" :height="video_height"
+            src="https://youtube.com/embed/-l7lalNDloI?rel=0&autoplay=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </video-modal>
+
+    
+    <video-modal v-if="show_2nd_video_modal"
+        @close="show_2nd_video_modal = false">
+        <iframe width="90%" :height="video_height"
+            src="https://youtube.com/embed/Scy0Qwiw4vA?rel=0&autoplay=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </video-modal>
+
+    <div class="container">
+        <footer style="text-align: center; font-size: 14px">
+    <div class="mb-2">
+        <strong>toSERVO - Veteran Owned and Operated</strong><br>
+        Copyright &copy; 2025 toSERVO
+
+        |
+
+        <a href="https://docs.google.com/document/d/e/2PACX-1vSCrvQHbEjyd7NgNqKuwRkLf_i9oJlCydipB0RaKnIodR9iEtRIE68wG0eaXdr8Wk4L4ypsO8YZfEg4/pub"
+            target="_blank">Terms of Use</a>
+
+        |
+
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTXfJbhGN1J03FQNGE2706Y4SjQOa64kCOIESPHc1H7b8kx9Y8b9bmTO1hh4VQJuGyljTibi5GS1Vqx/pub"
+            target="_blank">Privacy Policy</a>
+
+        |
+
+        <a href="https://docs.google.com/document/d/e/2PACX-1vT1OxU9GBm5LA8u2P0L83PJSUmDNjMziOfPk5-J9CugBSefOEWjJHZszqp_B4qF3g5mjUreBT8zbvzv/pub"
+            target="_blank">Security Statement</a>
+
+        |
+
+        <a href="https://docs.google.com/document/d/e/2PACX-1vR870iotYOIaWQRwk5D1j1cQGSwyhkmtphb_4Fb7SQC5rlCUyeC2MWCf04Nr5h_duiTWlKmLwvL9vxY/pub"
+            target="_blank">Beta Access Agreement</a>
+
+            </div>
+</footer>
+    </div>
+</div>
+
+         <script src="/js/guest-app.js?id=68b78afa59c8e747d3ad"></script>
+
+        <script>
+   var app = new Vue({
+       el: '#welcome-page',
+       data: {
+           windowWidth: window.innerWidth,
+           show_video_modal: false,
+           show_2nd_video_modal: false
+       },
+       computed: {
+           carouselWidth() {
+               if (this.windowWidth < 414) {
+                   return Math.round(this.windowWidth * .5);
+               }
+               return 300;
+           },
+           carouselHeight() {
+               if (this.windowWidth < 414) {
+                   return Math.round(
+                       (this.windowWidth * .5) * (650/300)
+                   ) + 125;
+               }
+               return 650;
+           },
+           windowInnerWidth() {
+               return window.innerWidth;
+           },
+           windowInnerHeight() {
+               return window.innerHeight;
+           },
+           video_width() {
+               // Original dimensions were 560x315 or 1.77777777 ratio
+               var width = Math.floor( this.video_height * 1.777777777 );
+
+               if (width > this.windowInnerWidth)
+                   return this.windowInnerWidth * 0.9;
+
+               return width;
+           },
+           video_height() {
+               var height = Math.floor( this.windowInnerHeight * 0.9 );
+               var expectedWidth = Math.floor( height * 1.777777777 );
+
+               if (this.windowInnerWidth < expectedWidth)
+                   return Math.floor( (this.windowInnerWidth * 0.9) / 1.777777777 );
+
+               return height;
+           }
+       },
+       methods: {
+           onResize() {
+               this.windowWidth = window.innerWidth;
+           }
+       },
+       mounted() {
+           this.$nextTick(() => {
+               window.addEventListener('resize', this.onResize);
+           })
+       }
+   });
+</script>
+
+        <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '223349365468353');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=223349365468353&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    </body>
+</html>
