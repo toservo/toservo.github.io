@@ -1,0 +1,10 @@
+{
+    "/js/customer-app.js": "/js/customer-app.js",
+    "/js/admin-app.js": "/js/admin-app.js",
+    "/js/servicer-app.js": "/js/servicer-app.js",
+    "/js/guest-app.js": "/js/guest-app.js",
+    "/css/guest-app.css": "/css/guest-app.css",
+    "/css/servicer-app.css": "/css/servicer-app.css",
+    "/css/customer-app.css": "/css/customer-app.css",
+    "/css/admin-app.css": "/css/admin-app.css"
+}
